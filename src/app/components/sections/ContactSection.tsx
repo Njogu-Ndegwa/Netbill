@@ -27,7 +27,7 @@ export const ContactSection: React.FC = () => {
               <Phone className="w-8 h-8 text-cyan-400" />
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-white/70">+254 700 123 456</p>
+                <p className="text-white/70">+254 795635364</p>
               </div>
             </div>
 
@@ -35,7 +35,7 @@ export const ContactSection: React.FC = () => {
               <Mail className="w-8 h-8 text-cyan-400" />
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-white/70">hello@netbillpro.co.ke</p>
+                <p className="text-white/70">hello@netbillpro.com</p>
               </div>
             </div>
 
