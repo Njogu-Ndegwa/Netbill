@@ -51,7 +51,7 @@ const BillingSystemLanding = () => {
       
       <HeroSection scrollToSection={scrollToSection} />
       <FeaturesSection />
-      <PricingSection />
+      <PricingSection scrollToSection={scrollToSection}/>
       <ContactSection />
       
       <Footer />

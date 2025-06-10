@@ -5,7 +5,10 @@ import React, { useState } from 'react';
 import { PricingCard } from '../ui/PricingCard';
 import { Users } from 'lucide-react';
 
-export const PricingSection: React.FC = () => {
+interface PricingSectionProps {
+  scrollToSection: (sectionId: string) => void;
+}
+export const PricingSection: React.FC<PricingSectionProps> = ({scrollToSection}) => {
   const [userCount, setUserCount] = useState(50);
 
   // Define pricing tiers for each plan
@@ -172,7 +175,7 @@ export const PricingSection: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
+            <PricingCard key={index} scrollToSection={scrollToSection} {...plan} />
           ))}
         </div>
       </div>

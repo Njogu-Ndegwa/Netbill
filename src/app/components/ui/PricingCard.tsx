@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { CheckCircle, Star } from 'lucide-react';
-
+ // Adjust the import path as necessary
 interface PricingCardProps {
   name: string;
   price: string;
@@ -10,6 +10,7 @@ interface PricingCardProps {
   description: string;
   features: string[];
   popular: boolean;
+  scrollToSection: (sectionId: string) => void;
 }
 
 export const PricingCard: React.FC<PricingCardProps> = ({
@@ -18,7 +19,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   period,
   description,
   features,
-  popular
+  popular,
+  scrollToSection
 }) => {
   return (
     <div
@@ -55,7 +57,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         ))}
       </ul>
 
-      <button className={`w-full py-4 rounded-full font-semibold transition-all duration-300 ${
+      <button onClick={() => scrollToSection('contact')} className={`w-full py-4 rounded-full font-semibold transition-all duration-300 ${
         popular
           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
           : 'border-2 border-white/30 hover:border-cyan-400 hover:bg-white/10'
